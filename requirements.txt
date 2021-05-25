@@ -1,0 +1,13 @@
+tk
+pywin32
+cryptography
+pygetwindow
+psutil
+shutil
+urllib
+email
+smtplib
+pystray
+pillow
+pyperclip
+striprtf
