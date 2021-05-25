@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='utf-8'?>
+<interface version="1.0">
+  <object class="ttk.Labelframe" id="keygen_F">
+    <property name="height">200</property>
+    <property name="labelanchor">n</property>
+    <property name="relief">flat</property>
+    <property name="text" translatable="yes">Key Gen</property>
+    <property name="width">200</property>
+    <layout manager="pack">
+      <property name="padx">5</property>
+      <property name="pady">5</property>
+      <property name="propagate">True</property>
+      <property name="side">top</property>
+    </layout>
+    <child>
+      <object class="ttk.Entry" id="keygen_E">
+        <property name="font">{Hack} 12 {bold}</property>
+        <property name="takefocus">true</property>
+        <property name="width">30</property>
+        <layout manager="grid">
+          <property name="propagate">True</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Button" id="keygen_B">
+        <property name="command">generate</property>
+        <property name="default">normal</property>
+        <property name="takefocus">true</property>
+        <property name="text" translatable="yes">Generate</property>
+        <layout manager="grid">
+          <property name="column">1</property>
+          <property name="propagate">True</property>
+          <property name="row">0</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Label" id="keygen_L">
+        <property name="font">{Hack} 12 {bold}</property>
+        <property name="textvariable">string:keygenLTV</property>
+        <property name="width">40</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="columnspan">2</property>
+          <property name="propagate">True</property>
+          <property name="row">1</property>
+        </layout>
+      </object>
+    </child>
+  </object>
+</interface>

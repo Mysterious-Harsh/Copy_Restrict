@@ -1,0 +1,223 @@
+<?xml version='1.0' encoding='utf-8'?>
+<interface version="1.0">
+  <object class="ttk.Frame" id="email_F">
+    <property name="height">790</property>
+    <property name="relief">flat</property>
+    <property name="takefocus">false</property>
+    <property name="width">790</property>
+    <layout manager="place">
+      <property name="anchor">nw</property>
+      <property name="height">790</property>
+      <property name="width">790</property>
+      <property name="x">0</property>
+      <property name="y">0</property>
+    </layout>
+    <child>
+      <object class="ttk.Label" id="label_1_2">
+        <property name="image">tentative software background_766x766.png</property>
+        <property name="text" translatable="yes">label_1_2</property>
+        <layout manager="place">
+          <property name="anchor">nw</property>
+          <property name="x">0</property>
+          <property name="y">0</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Label" id="from_L">
+        <property name="anchor">e</property>
+        <property name="background">#c1ffd8</property>
+        <property name="font">{Comic Sans MS} 12 {bold}</property>
+        <property name="text" translatable="yes">From</property>
+        <property name="width">10</property>
+        <layout manager="grid">
+          <property name="padx">10</property>
+          <property name="pady">10</property>
+          <property name="propagate">True</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Entry" id="from_E">
+        <property name="font">{Comic Sans MS} 10 {bold}</property>
+        <property name="width">50</property>
+        <layout manager="grid">
+          <property name="column">1</property>
+          <property name="padx">10</property>
+          <property name="pady">10</property>
+          <property name="propagate">True</property>
+          <property name="row">0</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Label" id="to_L">
+        <property name="anchor">e</property>
+        <property name="background">#c1ffd8</property>
+        <property name="font">{Comic Sans MS} 12 {bold}</property>
+        <property name="text" translatable="yes">To</property>
+        <property name="width">10</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="padx">10</property>
+          <property name="pady">0</property>
+          <property name="propagate">True</property>
+          <property name="row">1</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Listbox" id="to_list">
+        <property name="activestyle">underline</property>
+        <property name="font">{Comic Sans MS} 10 {bold}</property>
+        <property name="height">6</property>
+        <property name="relief">flat</property>
+        <property name="selectborderwidth">1</property>
+        <property name="selectmode">multiple</property>
+        <property name="state">normal</property>
+        <property name="takefocus">true</property>
+        <property name="width">50</property>
+        <layout manager="grid">
+          <property name="column">1</property>
+          <property name="padx">10</property>
+          <property name="propagate">True</property>
+          <property name="row">2</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Label" id="label_3">
+        <property name="anchor">e</property>
+        <property name="background">#c1ffd8</property>
+        <property name="font">{Comic Sans MS} 12 {bold}</property>
+        <property name="text" translatable="yes">Subject</property>
+        <property name="width">10</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="padx">10</property>
+          <property name="pady">5</property>
+          <property name="propagate">True</property>
+          <property name="row">3</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Entry" id="subject_E">
+        <property name="font">{Comic Sans MS} 10 {bold}</property>
+        <property name="width">50</property>
+        <layout manager="grid">
+          <property name="column">1</property>
+          <property name="padx">10</property>
+          <property name="pady">5</property>
+          <property name="propagate">True</property>
+          <property name="row">3</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Label" id="label_4">
+        <property name="anchor">e</property>
+        <property name="background">#c1ffd8</property>
+        <property name="font">{Comic Sans MS} 12 {bold}</property>
+        <property name="text" translatable="yes">Attachment</property>
+        <property name="width">10</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="padx">10</property>
+          <property name="pady">5</property>
+          <property name="propagate">True</property>
+          <property name="row">4</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Entry" id="attachmet_E">
+        <property name="font">{Comic Sans MS} 10 {bold}</property>
+        <property name="state">readonly</property>
+        <property name="width">50</property>
+        <bind sequence="&lt;Backspace&gt;" handler="remove_attachment" add="" />
+        <bind sequence="&lt;Button-1&gt;" handler="add_attachment" add="" />
+        <layout manager="grid">
+          <property name="column">1</property>
+          <property name="padx">10</property>
+          <property name="pady">5</property>
+          <property name="propagate">True</property>
+          <property name="row">4</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Label" id="label_5">
+        <property name="anchor">e</property>
+        <property name="background">#c1ffd8</property>
+        <property name="font">{Comic Sans MS} 12 {bold}</property>
+        <property name="text" translatable="yes">Message</property>
+        <property name="width">10</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="padx">10</property>
+          <property name="pady">0</property>
+          <property name="propagate">True</property>
+          <property name="row">5</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Text" id="message_T">
+        <property name="font">{Comic Sans MS} 10 {bold}</property>
+        <property name="height">10</property>
+        <property name="insertunfocussed">none</property>
+        <property name="maxundo">4</property>
+        <property name="relief">flat</property>
+        <property name="state">normal</property>
+        <property name="takefocus">true</property>
+        <property name="undo">true</property>
+        <property name="width">50</property>
+        <layout manager="grid">
+          <property name="column">1</property>
+          <property name="padx">10</property>
+          <property name="pady">0</property>
+          <property name="propagate">True</property>
+          <property name="row">6</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Button" id="send_B">
+        <property name="command">send</property>
+        <property name="text" translatable="yes">Send</property>
+        <layout manager="grid">
+          <property name="propagate">True</property>
+          <property name="row">7</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Button" id="close_B">
+        <property name="command">close</property>
+        <property name="text" translatable="yes">Close</property>
+        <layout manager="grid">
+          <property name="column">2</property>
+          <property name="propagate">True</property>
+          <property name="row">7</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Label" id="count_L">
+        <property name="anchor">w</property>
+        <property name="background">#c1ffd8</property>
+        <property name="font">{Comic Sans MS} 12 {bold}</property>
+        <property name="takefocus">false</property>
+        <property name="text" translatable="yes">0</property>
+        <property name="textvariable">string:count_LTV</property>
+        <property name="width">3</property>
+        <layout manager="grid">
+          <property name="column">2</property>
+          <property name="propagate">True</property>
+          <property name="row">4</property>
+        </layout>
+      </object>
+    </child>
+  </object>
+</interface>

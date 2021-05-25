@@ -1,0 +1,7 @@
+__pycache__/
+Backup/
+output/
+Lostfiles/
+registration _key/
+Service/
+*.log

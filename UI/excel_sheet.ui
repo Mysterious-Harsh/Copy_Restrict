@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='utf-8'?>
+<interface version="1.0">
+  <object class="ttk.Frame" id="frame_1">
+    <property name="height">200</property>
+    <property name="width">200</property>
+    <layout manager="pack">
+      <property name="propagate">True</property>
+      <property name="side">top</property>
+    </layout>
+    <child>
+      <object class="tk.Message" id="message_1">
+        <property name="background">#6fd2aa</property>
+        <property name="font">{Comic Sans MS} 10 {bold}</property>
+        <property name="relief">flat</property>
+        <property name="text" translatable="yes">Enter Sheet Number (,) seperated.
+Ex. 1,2,3</property>
+        <property name="width">250</property>
+        <layout manager="pack">
+          <property name="propagate">True</property>
+          <property name="side">top</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Entry" id="sheet_E">
+        <property name="takefocus">true</property>
+        <property name="width">25</property>
+        <layout manager="pack">
+          <property name="propagate">True</property>
+          <property name="side">top</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Button" id="conert_B">
+        <property name="command">convert</property>
+        <property name="default">normal</property>
+        <property name="state">normal</property>
+        <property name="takefocus">true</property>
+        <property name="text" translatable="yes">Convert</property>
+        <layout manager="pack">
+          <property name="propagate">True</property>
+          <property name="side">top</property>
+        </layout>
+      </object>
+    </child>
+  </object>
+</interface>
